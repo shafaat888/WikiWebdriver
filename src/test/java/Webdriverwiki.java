@@ -26,6 +26,9 @@ public void testwiki()
 {
 	Select select =new Select(driver.findElement(By.xpath("//*[@id='searchLanguage']")));
 	select.selectByValue("az");
+	WebElement block=driver.findElement(By.xpath("//*[@id='www-wikipedia-org']/div[6]/div[3]"));
+	List<WebElement> ele=block.findElements(By.tagName("a"));
+	System.out.println(ele.size());
 }
 @AfterTest
 public void teardown()
